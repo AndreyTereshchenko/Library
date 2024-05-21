@@ -450,17 +450,17 @@ function saveCardsToLocalStorage() {
 // Функция для загрузки массива книг из LocalStorage
 function loadFromLocalStorage() {
   const storedBooks = localStorage.getItem("bookList");
-  return storedBooks ? JSON.parse(storedBooks) : [];
+  return storedBooks ? JSON.parse(storedBooks) : bookList;
 }
 // Функция для загрузки посетителей из  LocalStorage
 function loadVisitorsFromLocalStorage() {
   const storedVisitors = localStorage.getItem("visitors");
-  return storedVisitors ? JSON.parse(storedVisitors) : [];
+  return storedVisitors ? JSON.parse(storedVisitors) : visitors;
 }
 // Функция для загрузки карты посетителя из  LocalStorage
 function loadCardsFromLocalStorage() {
   const storedCards = localStorage.getItem("cardsList");
-  return storedCards ? JSON.parse(storedCards) : [];
+  return storedCards ? JSON.parse(storedCards) : cardsList;
 }
 
 //Функция поиска книги на странице books
