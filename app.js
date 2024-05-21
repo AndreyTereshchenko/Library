@@ -394,6 +394,7 @@ const modal = document.querySelector(".modal_window");
 const section = document.querySelector(".section");
 
 
+
 let cardsList = [];
 
 //Определяем какая кнопка нажата
@@ -411,6 +412,8 @@ buttons.forEach((button) => {
 // Загрузка первой страницы
 window.addEventListener("load", function () {
   bookList = loadFromLocalStorage();
+  visitors = loadVisitorsFromLocalStorage();
+  cardsList = loadCardsFromLocalStorage();
   initializePage();
 });
 
@@ -447,17 +450,17 @@ function saveCardsToLocalStorage() {
 // Функция для загрузки массива книг из LocalStorage
 function loadFromLocalStorage() {
   const storedBooks = localStorage.getItem("bookList");
-  return storedBooks ? JSON.parse(storedBooks) : bookList;
+  return storedBooks ? JSON.parse(storedBooks) : [];
 }
 // Функция для загрузки посетителей из  LocalStorage
 function loadVisitorsFromLocalStorage() {
   const storedVisitors = localStorage.getItem("visitors");
-  return storedVisitors ? JSON.parse(storedVisitors) : visitors;
+  return storedVisitors ? JSON.parse(storedVisitors) : [];
 }
 // Функция для загрузки карты посетителя из  LocalStorage
 function loadCardsFromLocalStorage() {
   const storedCards = localStorage.getItem("cardsList");
-  return storedCards ? JSON.parse(storedCards) : cardsList;
+  return storedCards ? JSON.parse(storedCards) : [];
 }
 
 //Функция поиска книги на странице books
@@ -466,9 +469,9 @@ function filterBooks(arr, search) {
   return arr.filter((item) => {
     if (item.title && item.author && item.publisher) {
       return (
-        item.title.toLowerCase().indexOf(s) !== -1 ||
-        item.author.toLowerCase().indexOf(s) !== -1 ||
-        item.publisher.toLowerCase().indexOf(s) !== -1
+        item.title.toLowerCase().includes(s)||
+        item.author.toLowerCase().includes(s) ||
+        item.publisher.toLowerCase().includes(s)
       );
     }
   });
@@ -479,8 +482,8 @@ function filterCards(arr, search) {
   return arr.filter((item) => {
     if (item.visitors && item.title) {
       return (
-        item.visitors.toLowerCase().indexOf(s) !== -1 ||
-        item.title.toLowerCase().indexOf(s) !== -1
+        item.visitors.toLowerCase().includes(s)||
+        item.title.toLowerCase().includes(s)
       );
     }
   });
@@ -491,8 +494,8 @@ function filterVisitors(arr, search) {
   return arr.filter((item) => {
     if (item.fullName && item.phoneNumber) {
       return (
-        item.fullName.toLowerCase().indexOf(s) !== -1 ||
-        item.phoneNumber.toLowerCase().indexOf(s) !== -1
+        item.fullName.toLowerCase().includes(s) ||
+        item.phoneNumber.toLowerCase().includes(s)
       );
     }
   });
@@ -514,6 +517,8 @@ function closeModal() {
     });
   }
 }
+
+
 // Вызов модального окна на изменение либо удаления книги
 function changeModal() {
   let change = document.querySelectorAll(".change");
@@ -528,6 +533,14 @@ function changeModal() {
       back.classList.add("active1");
       document.body.style.overflow = 'hidden';
 
+      const bookId = button.getAttribute("data-id");
+
+      
+      const btnDelete = document.querySelector(".btnDelete");
+      const btnChange = document.querySelector(".btnChange");
+      btnChange.setAttribute("data-id", bookId);
+      btnDelete.setAttribute("data-id", bookId);
+
     });
   });
   closeModal();
@@ -537,7 +550,7 @@ function sortByNumber(f, arr) {
   arr.sort((a, b) => a[f] - b[f]);
   return arr;
 }
-function soryByString(f, arr) {
+function sortByString(f, arr) {
   arr.sort((a, b) => a[f].localeCompare(b[f]));
   return arr;
 }
@@ -614,10 +627,10 @@ function createBookTable() {
     console.log(selectedValue);
 
     if (selectedValue === "Author") {
-      arr = soryByString("author", arr);
+      arr = sortByString("author", arr);
     }
     if (selectedValue === "Title") {
-      arr = soryByString("title", arr);
+      arr = sortByString("title", arr);
     }
     if (selectedValue === "ID") {
       arr = sortByNumber("id", arr);
@@ -637,7 +650,7 @@ function createBookTable() {
     table.appendChild(tbody);
     createTableData(arr, tbody);
     changeModal();
-    deleteBook();
+    
   });
 
   const searchInput = document.createElement("input");
@@ -673,7 +686,7 @@ function createBookTable() {
     table.appendChild(tbody);
     createTableData(arr, tbody);
     changeModal();
-    deleteBook();
+   
   });
 
   const addBook = document.createElement("button");
@@ -929,9 +942,10 @@ function createBookTable() {
 function deleteBook() {
   const btnDelete = document.querySelector(".btnDelete");
   btnDelete.addEventListener("click", function () {
+    const bookId = btnDelete.getAttribute("data-id");
     win.classList.remove("active");
     back.classList.remove("active1");
-    const bookId = btnDelete.getAttribute("data-id");
+    
 
     const bookIndex = bookList.findIndex(
       (book) => book.id === parseInt(bookId)
@@ -1027,10 +1041,10 @@ function createVisitorsTable() {
     console.log(selectedValue);
 
     if (selectedValue === "Name") {
-      arr = soryByString("fullName", arr);
+      arr = sortByString("fullName", arr);
     }
     if (selectedValue === "Phone") {
-      arr = soryByString("phoneNumber", arr);
+      arr = sortByString("phoneNumber", arr);
     }
     if (selectedValue === "ID") {
       arr = sortByNumber("id", arr);
@@ -1048,6 +1062,7 @@ function createVisitorsTable() {
     table.appendChild(tbody);
     createTableDataVisitors(arr, tbody);
     changeModal();
+    
   });
 
   const searchInput = document.createElement("input");
@@ -1368,10 +1383,10 @@ function createCardsTable() {
       console.log(selectedValue);
 
       if (selectedValue === "Name") {
-        arr = soryByString("visitors", arr);
+        arr = sortByString("visitors", arr);
       }
       if (selectedValue === "Book") {
-        arr = soryByString("title", arr);
+        arr = sortByString("title", arr);
       }
       if (selectedValue === "ID") {
         arr = sortByNumber("id", arr);
@@ -1389,6 +1404,7 @@ function createCardsTable() {
       table.appendChild(tbody);
       createTableDataCards(arr, tbody);
       comBack();
+      deleteBook();
     });
    
 
