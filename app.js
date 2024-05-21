@@ -500,6 +500,7 @@ function filterVisitors(arr, search) {
     }
   });
 }
+
 // Функция закрытия модального окна
 function closeModal() {
   if (cls) {
@@ -658,9 +659,31 @@ function createBookTable() {
   searchInput.placeholder = "Search";
   search.appendChild(searchInput);
   let searchText = "";
-  searchInput.addEventListener("input", (e) => {
-    searchText = e.target.value;
-  });
+
+ // Обработчик события для поля поиска
+searchInput.addEventListener("input", (e) => {
+  // Обновление текста поиска при изменении ввода
+  searchText = e.target.value;
+  // Фильтрация данных по введенному тексту
+  if (searchText !== "") {
+    arr = filterBooks(bookList, searchText);
+  } else {
+    arr = [...bookList];
+  }
+  // Очистка таблицы и создание новой после фильтрации
+  document.getElementById("books").innerHTML = "";
+  const thead = document.createElement("thead");
+  table.appendChild(thead);
+
+  const headerRow = document.createElement("tr");
+  headerRow.innerHTML =
+    "<th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>Publisher</th><th>Pages</th><th>Copies</th><th>Change</th>";
+  thead.appendChild(headerRow);
+  const tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+  createTableData(arr, tbody);
+  changeModal();
+});
 
   const btnSearch = document.createElement("button");
   btnSearch.classList.add("btnSearch");
