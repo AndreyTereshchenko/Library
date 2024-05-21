@@ -661,20 +661,16 @@ function createBookTable() {
   let searchText = "";
 
  // Обработчик события для поля поиска
-searchInput.addEventListener("input", (e) => {
-  // Обновление текста поиска при изменении ввода
-  searchText = e.target.value;
-  // Фильтрация данных по введенному тексту
+searchInput.addEventListener("input", (e) => {  
+  searchText = e.target.value;  
   if (searchText !== "") {
     arr = filterBooks(bookList, searchText);
   } else {
     arr = [...bookList];
-  }
-  // Очистка таблицы и создание новой после фильтрации
+  }  
   document.getElementById("books").innerHTML = "";
   const thead = document.createElement("thead");
   table.appendChild(thead);
-
   const headerRow = document.createElement("tr");
   headerRow.innerHTML =
     "<th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>Publisher</th><th>Pages</th><th>Copies</th><th>Change</th>";
@@ -684,33 +680,6 @@ searchInput.addEventListener("input", (e) => {
   createTableData(arr, tbody);
   changeModal();
 });
-
-  const btnSearch = document.createElement("button");
-  btnSearch.classList.add("btnSearch");
-  btnSearch.textContent = "Search";
-  search.appendChild(btnSearch);
-  btnSearch.addEventListener("click", () => {
-    console.log(searchText);
-    if (searchText !== "") {
-      arr = filterBooks(arr, searchText);
-    } else {
-      arr = [...bookList];
-    }
-    console.log(arr);
-    document.getElementById("books").innerHTML = "";
-    const thead = document.createElement("thead");
-    table.appendChild(thead);
-
-    const headerRow = document.createElement("tr");
-    headerRow.innerHTML =
-      "<th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>Publisher</th><th>Pages</th><th>Copies</th><th>Change</th>";
-    thead.appendChild(headerRow);
-    const tbody = document.createElement("tbody");
-    table.appendChild(tbody);
-    createTableData(arr, tbody);
-    changeModal();
-   
-  });
 
   const addBook = document.createElement("button");
   addBook.classList.add("addBook");
@@ -1011,8 +980,6 @@ function createTableDataCards(arr, tbody) {
   arr.forEach((card) => {
     const row = document.createElement("tr");
     if (card.returneDate) {
-      const newDiv = document.createElement("div");
-      newDiv.textContent = card.returndate;
       row.innerHTML = `<td>${card.id}</td><td>${card.visitors}</td><td>${card.title}</td><td>${card.borrowDate}</td><td>${card.returneDate}</td>`;
     } else {
       row.innerHTML = `<td>${card.id}</td><td>${card.visitors}</td><td>${card.title}</td><td>${card.borrowDate}</td><td><button class="change" data-id="${card.id}">&#8630;</button></td>`;
@@ -1092,23 +1059,17 @@ function createVisitorsTable() {
   searchInput.type = "text";
   searchInput.placeholder = "Search";
   search.appendChild(searchInput);
-  let searchText = "";
+
+  let searchText = "";  
   searchInput.addEventListener("input", (e) => {
     searchText = e.target.value;
-  });
-
-  const btnSearch = document.createElement("button");
-  btnSearch.classList.add("btnSearch");
-  btnSearch.textContent = "Search";
-  search.appendChild(btnSearch);
-  btnSearch.addEventListener("click", () => {
-    console.log(searchText);
+ 
     if (searchText !== "") {
-      arr = filterVisitors(arr, searchText);
+      arr = filterVisitors(visitors, searchText);
     } else {
       arr = [...visitors];
     }
-    console.log(arr);
+   
     document.getElementById("visitors").innerHTML = "";
     const thead = document.createElement("thead");
     table.appendChild(thead);
@@ -1349,37 +1310,8 @@ function createCardsTable() {
   searchInput.type = "text";
   searchInput.placeholder = "Search";
   search.appendChild(searchInput);
-  let searchText = "";
-  searchInput.addEventListener("input", (e) => {
-    searchText = e.target.value;
-  });
 
-  const btnSearch = document.createElement("button");
-  btnSearch.classList.add("btnSearch");
-  btnSearch.textContent = "Search";
-  search.appendChild(btnSearch);
-  btnSearch.addEventListener("click", () => {
-    console.log(searchText);
-    if (searchText !== "") {
-      arr = filterCards(arr, searchText);
-    } else {
-      arr = [...cardsList];
-    }
-    console.log(arr);
-    document.getElementById("cards").innerHTML = "";
-    const thead = document.createElement("thead");
-    table.appendChild(thead);
-
-    const headerRow = document.createElement("tr");
-    headerRow.innerHTML =
-      "<th>ID</th><th>Visitor</th><th>Book</th><th>Borrow date</th><th>Returne date</th>";
-    thead.appendChild(headerRow);
-    const tbody = document.createElement("tbody");
-    table.appendChild(tbody);
-    createTableDataCards(arr, tbody);
-    comBack();
-  });
-  const btnSort = document.createElement("button");
+    const btnSort = document.createElement("button");
     btnSort.classList.add("btnSort");
     btnSort.textContent = "Sort";
     sort.appendChild(btnSort);
@@ -1427,12 +1359,34 @@ function createCardsTable() {
       table.appendChild(tbody);
       createTableDataCards(arr, tbody);
       comBack();
-      deleteBook();
-    });
-   
+      
+    });   
 
     
-  }
+    let searchText = "";
+  searchInput.addEventListener("input", (e) => {
+    searchText = e.target.value;  
+    if (searchText !== "") {
+      arr = filterCards(cardsList, searchText);
+    } else {
+      arr = [...cardsList];
+    }
+   
+    document.getElementById("cards").innerHTML = "";
+    const thead = document.createElement("thead");
+    table.appendChild(thead);
+
+    const headerRow = document.createElement("tr");
+    headerRow.innerHTML =
+      "<th>ID</th><th>Visitor</th><th>Book</th><th>Borrow date</th><th>Returne date</th>";
+    thead.appendChild(headerRow);
+    const tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    createTableDataCards(arr, tbody);
+    comBack();
+  });
+
+      }
 
   // Вызов модального окна на добавление новой карты
   if (addNewCard) {
