@@ -12,7 +12,6 @@ body {
 .header {
     height: 100px;
     background-color: #7297A6;
-    ;
     font-size: 40px;
     display: flex;
     align-items: center;
@@ -34,6 +33,7 @@ ul {
     margin: 0;
     list-style: none;
     font-size: 20px;
+    background-color: #011F26;
 }
 
 li {
@@ -42,6 +42,7 @@ li {
     padding: 20px 30px;
     border-left: solid 1px #7297A6;
     color: #BF9780;
+    background-color: #011F26;
 
 }
 
@@ -73,7 +74,7 @@ section {
 .data_list {
     width: 80%;
     background-color: #F2F2F0;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 table {
