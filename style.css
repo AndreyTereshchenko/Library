@@ -12,7 +12,6 @@ body {
 .header {
     height: 100px;
     background-color: #7297A6;
-    ;
     font-size: 40px;
     display: flex;
     align-items: center;
@@ -34,6 +33,7 @@ ul {
     margin: 0;
     list-style: none;
     font-size: 20px;
+    background-color: #011F26;
 }
 
 li {
@@ -42,6 +42,7 @@ li {
     padding: 20px 30px;
     border-left: solid 1px #7297A6;
     color: #BF9780;
+    background-color: #011F26;
 
 }
 
@@ -73,6 +74,7 @@ section {
 .data_list {
     width: 80%;
     background-color: #F2F2F0;
+    
 }
 
 table {
@@ -86,6 +88,7 @@ th,
 td {
     border: 1px solid #011F26;
     padding: 8px;
+    background-color: #F2F2F0;
 }
 
 table td:nth-child(1),
@@ -106,7 +109,6 @@ table td:nth-child(8) {
     width: 80%;
     justify-content: flex-start;
     gap: 50px
-
 }
 
 .open_modal {
@@ -231,81 +233,60 @@ button:active {
 }
 
 .best5Book,
-.best5Visitors{
+.best5Visitors {
 
     color: #011F26;
     background-color: #7297A6;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
 }
-.top{
+
+.top {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
-    
+
 }
 
 
-.best5Book ol, .best5Visitors ol {
+.best5Book ol,
+.best5Visitors ol {
     display: flex;
     flex-direction: column;
 
 }
 
-.best5Book li, .best5Visitors li, .data_list p {
+.best5Book li,
+.best5Visitors li,
+.data_list p {
     color: #011F26;
     padding: 5px 5px;
     font-size: 24px;
 
 }
-.data_list p{
-    display: flex;    
+
+.data_list p {
+    display: flex;
     justify-content: center;
     background-color: #7297A6;
 }
 
-.best5Book li:hover, .best5Visitors li:hover {
+.best5Book li:hover,
+.best5Visitors li:hover {
     background-color: #7297A6;
 }
 
-h2, .best5Visitors {
+h2,
+.best5Visitors {
     padding: 10px;
-    
+
 }
-h2{
+
+h2 {
     font-size: 36px;
-    color:#BF9780;
-    text-shadow: 2px 2px 2px #011F26;
-};
-
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
-  }
-
-
-
-/* Color Theme Swatches in Hex */
-.Мода-1-hex {
-    color: #592547;
-}
-
-.Мода-2-hex {
-    color: #7297A6;
-}
-
-.Мода-3-hex {
-    color: #011F26;
-}
-
-.Мода-4-hex {
-    color: #F2F2F0;
-}
-
-.Мода-5-hex {
     color: #BF9780;
+    text-shadow: 2px 2px 2px #011F26;
 }
 
-/* Color Theme Swatches in RGBA */

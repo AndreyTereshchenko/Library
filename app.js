@@ -268,7 +268,7 @@ let bookList = [
     publisher: "Random House",
     pages: 304,
     copiesInLibrary: 4,
-  }
+  },
 ];
 
 let visitors = [
@@ -393,8 +393,6 @@ const changeContent = document.getElementById("changeContent");
 const modal = document.querySelector(".modal_window");
 const section = document.querySelector(".section");
 
-
-
 let cardsList = [];
 
 //Определяем какая кнопка нажата
@@ -473,7 +471,7 @@ function filterBooks(arr, search) {
   return arr.filter((item) => {
     if (item.title && item.author && item.publisher) {
       return (
-        item.title.toLowerCase().includes(s)||
+        item.title.toLowerCase().includes(s) ||
         item.author.toLowerCase().includes(s) ||
         item.publisher.toLowerCase().includes(s)
       );
@@ -486,7 +484,7 @@ function filterCards(arr, search) {
   return arr.filter((item) => {
     if (item.visitors && item.title) {
       return (
-        item.visitors.toLowerCase().includes(s)||
+        item.visitors.toLowerCase().includes(s) ||
         item.title.toLowerCase().includes(s)
       );
     }
@@ -511,18 +509,17 @@ function closeModal() {
     cls.addEventListener("click", function () {
       win.classList.remove("active");
       back.classList.remove("active1");
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     });
   }
   if (back) {
     back.addEventListener("click", function () {
       win.classList.remove("active");
       back.classList.remove("active1");
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     });
   }
 }
-
 
 // Вызов модального окна на изменение либо удаления книги
 function changeModal() {
@@ -536,16 +533,14 @@ function changeModal() {
       changeContent.style.display = "flex";
       win.classList.add("active");
       back.classList.add("active1");
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
 
       const bookId = button.getAttribute("data-id");
 
-      
       const btnDelete = document.querySelector(".btnDelete");
       const btnChange = document.querySelector(".btnChange");
       btnChange.setAttribute("data-id", bookId);
       btnDelete.setAttribute("data-id", bookId);
-
     });
   });
   closeModal();
@@ -655,7 +650,6 @@ function createBookTable() {
     table.appendChild(tbody);
     createTableData(arr, tbody);
     changeModal();
-    
   });
 
   const searchInput = document.createElement("input");
@@ -664,26 +658,26 @@ function createBookTable() {
   search.appendChild(searchInput);
   let searchText = "";
 
- // Обработчик события для поля поиска
-searchInput.addEventListener("input", (e) => {  
-  searchText = e.target.value;  
-  if (searchText !== "") {
-    arr = filterBooks(bookList, searchText);
-  } else {
-    arr = [...bookList];
-  }  
-  document.getElementById("books").innerHTML = "";
-  const thead = document.createElement("thead");
-  table.appendChild(thead);
-  const headerRow = document.createElement("tr");
-  headerRow.innerHTML =
-    "<th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>Publisher</th><th>Pages</th><th>Copies</th><th>Change</th>";
-  thead.appendChild(headerRow);
-  const tbody = document.createElement("tbody");
-  table.appendChild(tbody);
-  createTableData(arr, tbody);
-  changeModal();
-});
+  // Обработчик события для поля поиска
+  searchInput.addEventListener("input", (e) => {
+    searchText = e.target.value;
+    if (searchText !== "") {
+      arr = filterBooks(bookList, searchText);
+    } else {
+      arr = [...bookList];
+    }
+    document.getElementById("books").innerHTML = "";
+    const thead = document.createElement("thead");
+    table.appendChild(thead);
+    const headerRow = document.createElement("tr");
+    headerRow.innerHTML =
+      "<th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>Publisher</th><th>Pages</th><th>Copies</th><th>Change</th>";
+    thead.appendChild(headerRow);
+    const tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    createTableData(arr, tbody);
+    changeModal();
+  });
 
   const addBook = document.createElement("button");
   addBook.classList.add("addBook");
@@ -707,7 +701,7 @@ searchInput.addEventListener("input", (e) => {
       changeContent.style.display = "none";
       win.classList.add("active");
       back.classList.add("active1");
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     });
   }
   closeModal();
@@ -788,8 +782,7 @@ searchInput.addEventListener("input", (e) => {
         return;
       }
       if (!/^\d+$/.test(newPages) || newPages < 0) {
-        textAddBook.textContent =
-          "Please enter the number of pages correctly.";
+        textAddBook.textContent = "Please enter the number of pages correctly.";
         textAddBook.classList.add("error-message");
         textAddBook.style.fontSize = "16px";
         textAddBook.style.color = "#592547";
@@ -815,7 +808,7 @@ searchInput.addEventListener("input", (e) => {
       bookList.push(newBook);
       saveToLocalStorage();
       createBookTable();
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
       win.classList.remove("active");
       back.classList.remove("active1");
     });
@@ -891,7 +884,7 @@ searchInput.addEventListener("input", (e) => {
         textChangeBook.style.color = "#592547";
         return;
       }
-        if (
+      if (
         !/^\d+$/.test(newYear) ||
         isNaN(newYear) ||
         newYear < 0 ||
@@ -914,11 +907,11 @@ searchInput.addEventListener("input", (e) => {
       if (!/^\d+$/.test(newCopies) || newCopies < 0) {
         textChangeBook.textContent =
           "Please enter the number of copies correctly.";
-          textChangeBook.classList.add("error-message");
-          textChangeBook.style.fontSize = "16px";
-          textChangeBook.style.color = "#592547";
+        textChangeBook.classList.add("error-message");
+        textChangeBook.style.fontSize = "16px";
+        textChangeBook.style.color = "#592547";
         return;
-      }      
+      }
       bookList[bookIndex].title = newTitle;
       bookList[bookIndex].author = newAuthor;
       bookList[bookIndex].year = newYear;
@@ -929,7 +922,7 @@ searchInput.addEventListener("input", (e) => {
       createBookTable();
       win.classList.remove("active");
       back.classList.remove("active1");
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   });
 }
@@ -941,7 +934,6 @@ function deleteBook() {
     const bookId = btnDelete.getAttribute("data-id");
     win.classList.remove("active");
     back.classList.remove("active1");
-    
 
     const bookIndex = bookList.findIndex(
       (book) => book.id === parseInt(bookId)
@@ -956,7 +948,7 @@ function deleteBook() {
 
       saveToLocalStorage();
       createBookTable();
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   });
 }
@@ -1056,7 +1048,6 @@ function createVisitorsTable() {
     table.appendChild(tbody);
     createTableDataVisitors(arr, tbody);
     changeModal();
-    
   });
 
   const searchInput = document.createElement("input");
@@ -1064,16 +1055,16 @@ function createVisitorsTable() {
   searchInput.placeholder = "Search";
   search.appendChild(searchInput);
 
-  let searchText = "";  
+  let searchText = "";
   searchInput.addEventListener("input", (e) => {
     searchText = e.target.value;
- 
+
     if (searchText !== "") {
       arr = filterVisitors(visitors, searchText);
     } else {
       arr = [...visitors];
     }
-   
+
     document.getElementById("visitors").innerHTML = "";
     const thead = document.createElement("thead");
     table.appendChild(thead);
@@ -1108,7 +1099,7 @@ function createVisitorsTable() {
       changeContent.style.display = "none";
       win.classList.add("active");
       back.classList.add("active1");
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     });
   }
   closeModal();
@@ -1136,7 +1127,7 @@ function createVisitorsTable() {
     btnAddVisitors.addEventListener("click", function () {
       const newPhone = modalPhone.value.trim();
       const newName = modalName.value.trim();
-      
+
       if (newPhone === "" || newName === "") {
         textAddVisitors.textContent = "Please fill in all the fields";
         textAddVisitors.classList.add("error-message");
@@ -1144,7 +1135,7 @@ function createVisitorsTable() {
         textAddVisitors.style.color = "#592547";
         return;
       }
-      if (!/^[-+()\d]+$/.test(newPhone)){
+      if (!/^[-+()\d]+$/.test(newPhone)) {
         textAddVisitors.textContent = "Please enter a valid phone numbe";
         textAddVisitors.classList.add("error-message");
         textAddVisitors.style.fontSize = "16px";
@@ -1157,7 +1148,7 @@ function createVisitorsTable() {
         textAddVisitors.style.fontSize = "16px";
         textAddVisitors.style.color = "#592547";
         return;
-    }
+      }
       const newVisitors = {
         id: visitors.length + 1,
         fullName: modalName.value,
@@ -1168,9 +1159,8 @@ function createVisitorsTable() {
       createVisitorsTable();
       win.classList.remove("active");
       back.classList.remove("active1");
-      document.body.style.overflow = 'auto';
-   });
-  
+      document.body.style.overflow = "auto";
+    });
   }
   changeModal();
 
@@ -1230,7 +1220,7 @@ function createVisitorsTable() {
       });
       saveVisitorsToLocalStorage();
       createVisitorsTable();
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   });
 
@@ -1251,8 +1241,8 @@ function createVisitorsTable() {
         textChangeVisitors.style.color = "#592547";
         return;
       }
-      
-      if (!/^[-+()\d]+$/.test(newPhone)){
+
+      if (!/^[-+()\d]+$/.test(newPhone)) {
         textChangeVisitors.textContent = "Please enter a valid phone number";
         textChangeVisitors.classList.add("error-message");
         textChangeVisitors.style.fontSize = "16px";
@@ -1265,16 +1255,16 @@ function createVisitorsTable() {
         textChangeVisitors.style.fontSize = "16px";
         textChangeVisitors.style.color = "#592547";
         return;
-          }  
-          
-        visitors[visitorIndex].fullName = newName;     
-        visitors[visitorIndex].phoneNumber = newPhone;
-      
+      }
+
+      visitors[visitorIndex].fullName = newName;
+      visitors[visitorIndex].phoneNumber = newPhone;
+
       saveVisitorsToLocalStorage();
       createVisitorsTable();
       win.classList.remove("active");
       back.classList.remove("active1");
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   });
 }
@@ -1315,10 +1305,10 @@ function createCardsTable() {
   searchInput.placeholder = "Search";
   search.appendChild(searchInput);
 
-    const btnSort = document.createElement("button");
-    btnSort.classList.add("btnSort");
-    btnSort.textContent = "Sort";
-    sort.appendChild(btnSort);
+  const btnSort = document.createElement("button");
+  btnSort.classList.add("btnSort");
+  btnSort.textContent = "Sort";
+  sort.appendChild(btnSort);
 
   if (cardsList.length > 0) {
     const table = document.createElement("table");
@@ -1336,7 +1326,7 @@ function createCardsTable() {
     const tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
-    createTableDataCards(arr, tbody);    
+    createTableDataCards(arr, tbody);
 
     btnSort.addEventListener("click", () => {
       console.log(selectedValue);
@@ -1363,34 +1353,31 @@ function createCardsTable() {
       table.appendChild(tbody);
       createTableDataCards(arr, tbody);
       comBack();
-      
-    });   
-
+    });
 
     let searchText = "";
-  searchInput.addEventListener("input", (e) => {
-    searchText = e.target.value;  
-    if (searchText !== "") {
-      arr = filterCards(cardsList, searchText);
-    } else {
-      arr = [...cardsList];
-    }
-   
-    document.getElementById("cards").innerHTML = "";
-    const thead = document.createElement("thead");
-    table.appendChild(thead);
-
-    const headerRow = document.createElement("tr");
-    headerRow.innerHTML =
-      "<th>ID</th><th>Visitor</th><th>Book</th><th>Borrow date</th><th>Returne date</th>";
-    thead.appendChild(headerRow);
-    const tbody = document.createElement("tbody");
-    table.appendChild(tbody);
-    createTableDataCards(arr, tbody);
-    comBack();
-  });
-
+    searchInput.addEventListener("input", (e) => {
+      searchText = e.target.value;
+      if (searchText !== "") {
+        arr = filterCards(cardsList, searchText);
+      } else {
+        arr = [...cardsList];
       }
+
+      document.getElementById("cards").innerHTML = "";
+      const thead = document.createElement("thead");
+      table.appendChild(thead);
+
+      const headerRow = document.createElement("tr");
+      headerRow.innerHTML =
+        "<th>ID</th><th>Visitor</th><th>Book</th><th>Borrow date</th><th>Returne date</th>";
+      thead.appendChild(headerRow);
+      const tbody = document.createElement("tbody");
+      table.appendChild(tbody);
+      createTableDataCards(arr, tbody);
+      comBack();
+    });
+  }
 
   // Вызов модального окна на добавление новой карты
   if (addNewCard) {
@@ -1400,7 +1387,7 @@ function createCardsTable() {
       changeContent.style.display = "none";
       win.classList.add("active");
       back.classList.add("active1");
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     });
   }
   closeModal();
@@ -1517,10 +1504,8 @@ function createCardsTable() {
     }
   }
   comBack();
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = "auto";
 }
-
-
 
 // функция построения и заполнения страницы Statistic
 function createStatisticsPage() {
@@ -1530,13 +1515,11 @@ function createStatisticsPage() {
   addition.innerHTML = "";
   cardsList = loadCardsFromLocalStorage();
 
- 
   const top = document.createElement("div");
   top.classList.add("top");
   dataList.appendChild(top);
 
-  if (cardsList.length > 0) {   
-
+  if (cardsList.length > 0) {
     // Топ 5 книг
     const best5Book = document.createElement("div");
     best5Book.classList.add("best5Book");
@@ -1595,5 +1578,4 @@ function createStatisticsPage() {
     message.textContent = "No books have been borrowed from the library yet.";
     top.appendChild(message);
   }
-  
 }
