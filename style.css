@@ -73,6 +73,7 @@ section {
 .data_list {
     width: 80%;
     background-color: #F2F2F0;
+    margin-left: 10px;
 }
 
 table {
@@ -86,6 +87,7 @@ th,
 td {
     border: 1px solid #011F26;
     padding: 8px;
+    background-color: #F2F2F0;
 }
 
 table td:nth-child(1),
