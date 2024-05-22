@@ -33,7 +33,11 @@ ul {
     margin: 0;
     list-style: none;
     font-size: 20px;
+<<<<<<< HEAD
     background-color: #011F26;
+=======
+   
+>>>>>>> c89d6b7bf715da636f64ef0e0436c27c4ae1411b
 }
 
 li {
@@ -42,7 +46,11 @@ li {
     padding: 20px 30px;
     border-left: solid 1px #7297A6;
     color: #BF9780;
+<<<<<<< HEAD
     background-color: #011F26;
+=======
+    
+>>>>>>> c89d6b7bf715da636f64ef0e0436c27c4ae1411b
 
 }
 
@@ -74,7 +82,11 @@ section {
 .data_list {
     width: 80%;
     background-color: #F2F2F0;
+<<<<<<< HEAD
     
+=======
+    margin-right: 10px;
+>>>>>>> c89d6b7bf715da636f64ef0e0436c27c4ae1411b
 }
 
 table {
@@ -290,3 +302,7 @@ h2 {
     text-shadow: 2px 2px 2px #011F26;
 }
 
+<<<<<<< HEAD
+=======
+/* Color Theme Swatches in RGBA */
+>>>>>>> c89d6b7bf715da636f64ef0e0436c27c4ae1411b
