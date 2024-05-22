@@ -1,35 +1,35 @@
 let bookList = [
   {
     id: 1,
-    title: "Мастер и Маргарита",
-    author: "Михаил Булгаков",
+    title: "The Master and Margarita",
+    author: "Mikhail Bulgakov",
     year: 1966,
-    publisher: "Художественная литература",
+    publisher: "Khudozhestvennaya Literatura",
     pages: 480,
     copiesInLibrary: 5,
   },
   {
     id: 2,
-    title: "Преступление и наказание",
-    author: "Федор Достоевский",
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
     year: 1866,
-    publisher: "Русский вестник",
+    publisher: "Russkiy Vestnik",
     pages: 671,
     copiesInLibrary: 3,
   },
   {
     id: 3,
-    title: "Война и мир",
-    author: "Лев Толстой",
+    title: "War and Peace",
+    author: "Leo Tolstoy",
     year: 1869,
-    publisher: "Русский вестник",
+    publisher: "Russkiy Vestnik",
     pages: 1225,
     copiesInLibrary: 7,
   },
   {
     id: 4,
     title: "1984",
-    author: "Джордж Оруэлл",
+    author: "George Orwell",
     year: 1949,
     publisher: "Secker & Warburg",
     pages: 328,
@@ -37,26 +37,26 @@ let bookList = [
   },
   {
     id: 5,
-    title: "Анна Каренина",
-    author: "Лев Толстой",
+    title: "Anna Karenina",
+    author: "Leo Tolstoy",
     year: 1877,
-    publisher: "Русский вестник",
+    publisher: "Russkiy Vestnik",
     pages: 864,
     copiesInLibrary: 4,
   },
   {
     id: 6,
-    title: "Три товарища",
-    author: "Эрих Мария Ремарк",
+    title: "Three Comrades",
+    author: "Erich Maria Remarque",
     year: 1936,
-    publisher: "АСТ",
+    publisher: "AST",
     pages: 512,
     copiesInLibrary: 6,
   },
   {
     id: 7,
-    title: "Гарри Поттер и философский камень",
-    author: "Дж. К. Роулинг",
+    title: "Harry Potter and the Philosopher's Stone",
+    author: "J.K. Rowling",
     year: 1997,
     publisher: "Bloomsbury",
     pages: 223,
@@ -64,8 +64,8 @@ let bookList = [
   },
   {
     id: 8,
-    title: "Властелин колец",
-    author: "Дж. Р. Р. Толкин",
+    title: "The Lord of the Rings",
+    author: "J.R.R. Tolkien",
     year: 1954,
     publisher: "George Allen & Unwin",
     pages: 1178,
@@ -73,8 +73,8 @@ let bookList = [
   },
   {
     id: 9,
-    title: "Маленький принц",
-    author: "Антуан де Сент-Экзюпери",
+    title: "The Little Prince",
+    author: "Antoine de Saint-Exupéry",
     year: 1943,
     publisher: "Reynal & Hitchcock",
     pages: 91,
@@ -82,8 +82,8 @@ let bookList = [
   },
   {
     id: 10,
-    title: "Унесенные ветром",
-    author: "Маргарет Митчелл",
+    title: "Gone with the Wind",
+    author: "Margaret Mitchell",
     year: 1936,
     publisher: "Macmillan Publishers",
     pages: 1037,
@@ -91,35 +91,35 @@ let bookList = [
   },
   {
     id: 11,
-    title: "Мертвые души",
-    author: "Николай Гоголь",
+    title: "Dead Souls",
+    author: "Nikolai Gogol",
     year: 1842,
-    publisher: "Современник",
+    publisher: "Sovremennik",
     pages: 352,
     copiesInLibrary: 5,
   },
   {
     id: 12,
-    title: "Война и мир",
-    author: "Лев Толстой",
+    title: "War and Peace",
+    author: "Leo Tolstoy",
     year: 1869,
-    publisher: "Русский вестник",
+    publisher: "Russkiy Vestnik",
     pages: 1225,
     copiesInLibrary: 7,
   },
   {
     id: 13,
-    title: "Убить пересмешника",
-    author: "Харпер Ли",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
     year: 1960,
-    publisher: "J. B. Lippincott & Co.",
+    publisher: "J.B. Lippincott & Co.",
     pages: 281,
     copiesInLibrary: 5,
   },
   {
     id: 14,
     title: "1984",
-    author: "Джордж Оруэлл",
+    author: "George Orwell",
     year: 1949,
     publisher: "Secker & Warburg",
     pages: 328,
@@ -127,8 +127,8 @@ let bookList = [
   },
   {
     id: 15,
-    title: "Великий Гэтсби",
-    author: "Фрэнсис Скотт Фицджеральд",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
     year: 1925,
     publisher: "Charles Scribner's Sons",
     pages: 180,
@@ -136,8 +136,8 @@ let bookList = [
   },
   {
     id: 16,
-    title: "Гордость и предубеждение",
-    author: "Джейн Остин",
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
     year: 1813,
     publisher: "T. Egerton",
     pages: 279,
@@ -145,8 +145,8 @@ let bookList = [
   },
   {
     id: 17,
-    title: "Ловец в житомире",
-    author: "Дж.Д. Сэлинджер",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
     year: 1951,
     publisher: "Little, Brown and Company",
     pages: 277,
@@ -154,8 +154,8 @@ let bookList = [
   },
   {
     id: 18,
-    title: "Моби Дик; или, Кит",
-    author: "Герман Мелвилл",
+    title: "Moby-Dick; or, The Whale",
+    author: "Herman Melville",
     year: 1851,
     publisher: "Harper & Brothers",
     pages: 625,
@@ -163,8 +163,8 @@ let bookList = [
   },
   {
     id: 19,
-    title: "Властелин мух",
-    author: "Уильям Голдинг",
+    title: "Lord of the Flies",
+    author: "William Golding",
     year: 1954,
     publisher: "Faber and Faber",
     pages: 224,
@@ -172,8 +172,8 @@ let bookList = [
   },
   {
     id: 20,
-    title: "Хоббит",
-    author: "Дж.Р.Р. Толкиен",
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
     year: 1937,
     publisher: "George Allen & Unwin",
     pages: 310,
@@ -181,8 +181,8 @@ let bookList = [
   },
   {
     id: 21,
-    title: "Алхимик",
-    author: "Пауло Коэльо",
+    title: "The Alchemist",
+    author: "Paulo Coelho",
     year: 1988,
     publisher: "HarperOne",
     pages: 197,
@@ -190,8 +190,8 @@ let bookList = [
   },
   {
     id: 22,
-    title: "О дивный новый мир",
-    author: "Олдос Хаксли",
+    title: "Brave New World",
+    author: "Aldous Huxley",
     year: 1932,
     publisher: "Chatto & Windus",
     pages: 311,
@@ -199,8 +199,8 @@ let bookList = [
   },
   {
     id: 23,
-    title: "Властелин колец",
-    author: "Дж.Р.Р. Толкиен",
+    title: "The Lord of the Rings",
+    author: "J.R.R. Tolkien",
     year: 1954,
     publisher: "George Allen & Unwin",
     pages: 1178,
@@ -208,8 +208,8 @@ let bookList = [
   },
   {
     id: 24,
-    title: "Код да Винчи",
-    author: "Дэн Браун",
+    title: "The Da Vinci Code",
+    author: "Dan Brown",
     year: 2003,
     publisher: "Doubleday",
     pages: 454,
@@ -217,8 +217,8 @@ let bookList = [
   },
   {
     id: 25,
-    title: "Сияние",
-    author: "Стивен Кинг",
+    title: "The Shining",
+    author: "Stephen King",
     year: 1977,
     publisher: "Doubleday",
     pages: 447,
@@ -226,8 +226,8 @@ let bookList = [
   },
   {
     id: 26,
-    title: "Гарри Поттер и философский камень",
-    author: "Дж.К. Роулинг",
+    title: "Harry Potter and the Philosopher's Stone",
+    author: "J.K. Rowling",
     year: 1997,
     publisher: "Bloomsbury",
     pages: 223,
@@ -235,8 +235,8 @@ let bookList = [
   },
   {
     id: 27,
-    title: "Игры голода",
-    author: "Сьюзен Коллинз",
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
     year: 2008,
     publisher: "Scholastic",
     pages: 374,
@@ -244,17 +244,17 @@ let bookList = [
   },
   {
     id: 28,
-    title: "Сто лет одиночества",
-    author: "Габриэль Гарсиа Маркес",
+    title: "One Hundred Years of Solitude",
+    author: "Gabriel Garcia Marquez",
     year: 1967,
-    publisher: "Харпер и Роу",
+    publisher: "Harper & Row",
     pages: 417,
     copiesInLibrary: 5,
   },
   {
     id: 29,
-    title: "Портрет Дориана Грея",
-    author: "Оскар Уайльд",
+    title: "The Picture of Dorian Gray",
+    author: "Oscar Wilde",
     year: 1890,
     publisher: "Lippincott's Monthly Magazine",
     pages: 254,
@@ -262,114 +262,114 @@ let bookList = [
   },
   {
     id: 30,
-    title: "Тень горы",
-    author: "Грегори Дэвид Робертс",
+    title: "Shadow of the Mountain",
+    author: "Gregory David Roberts",
     year: 1997,
     publisher: "Random House",
     pages: 304,
     copiesInLibrary: 4,
-  },
+  }
 ];
 
 let visitors = [
   {
     id: 1,
-    fullName: "Иванов Иван Иванович",
+    fullName: "Ivanov Ivan Ivanovich",
     phoneNumber: "+1 (123) 456-7890",
   },
   {
     id: 2,
-    fullName: "Петров Петр Петрович",
+    fullName: "Petrov Petr Petrovich",
     phoneNumber: "+1 (234) 567-8901",
   },
   {
     id: 3,
-    fullName: "Сидоров Алексей Владимирович",
+    fullName: "Sidorov Alexey Vladimirovich",
     phoneNumber: "+1 (345) 678-9012",
   },
   {
     id: 4,
-    fullName: "Смирнова Елена Сергеевна",
+    fullName: "Smirnova Elena Sergeevna",
     phoneNumber: "+1 (456) 789-0123",
   },
   {
     id: 5,
-    fullName: "Козлов Валентин Павлович",
+    fullName: "Kozlov Valentin Pavlovich",
     phoneNumber: "+1 (567) 890-1234",
   },
   {
     id: 6,
-    fullName: "Морозова Ольга Николаевна",
+    fullName: "Morozova Olga Nikolaevna",
     phoneNumber: "+1 (678) 901-2345",
   },
   {
     id: 7,
-    fullName: "Павлов Андрей Александрович",
+    fullName: "Pavlov Andrey Aleksandrovich",
     phoneNumber: "+1 (789) 012-3456",
   },
   {
     id: 8,
-    fullName: "Васильева Анна Игоревна",
+    fullName: "Vasilieva Anna Igorevna",
     phoneNumber: "+1 (890) 123-4567",
   },
   {
     id: 9,
-    fullName: "Зайцев Михаил Викторович",
+    fullName: "Zaitsev Mikhail Viktorovich",
     phoneNumber: "+1 (901) 234-5678",
   },
   {
     id: 10,
-    fullName: "Кузнецова Екатерина Валентиновна",
+    fullName: "Kuznetsova Ekaterina Valentinovna",
     phoneNumber: "+1 (012) 345-6789",
   },
   {
     id: 11,
-    fullName: "Крылов Андрей Сергеевич",
+    fullName: "Krylov Andrey Sergeevich",
     phoneNumber: "+1 (123) 456-7890",
   },
   {
     id: 12,
-    fullName: "Лебедева Анна Алексеевна",
+    fullName: "Lebedeva Anna Alekseevna",
     phoneNumber: "+1 (234) 567-8901",
   },
   {
     id: 13,
-    fullName: "Максимов Павел Дмитриевич",
+    fullName: "Maksimov Pavel Dmitrievich",
     phoneNumber: "+1 (345) 678-9012",
   },
   {
     id: 14,
-    fullName: "Николаева Лариса Викторовна",
+    fullName: "Nikolaeva Larisa Viktorovna",
     phoneNumber: "+1 (456) 789-0123",
   },
   {
     id: 15,
-    fullName: "Орлов Сергей Анатольевич",
+    fullName: "Orlov Sergey Anatolyevich",
     phoneNumber: "+1 (567) 890-1234",
   },
   {
     id: 16,
-    fullName: "Попов Артем Игоревич",
+    fullName: "Popov Artem Igorevich",
     phoneNumber: "+1 (678) 901-2345",
   },
   {
     id: 17,
-    fullName: "Романова Валентина Петровна",
+    fullName: "Romanova Valentina Petrovna",
     phoneNumber: "+1 (789) 012-3456",
   },
   {
     id: 18,
-    fullName: "Семенов Денис Владимирович",
+    fullName: "Semenov Denis Vladimirovich",
     phoneNumber: "+1 (890) 123-4567",
   },
   {
     id: 19,
-    fullName: "Тарасов Андрей Алексеевич",
+    fullName: "Tarasov Andrey Alekseevich",
     phoneNumber: "+1 (901) 234-5678",
   },
   {
     id: 20,
-    fullName: "Федорова Людмила Ивановна",
+    fullName: "Fedorova Lyudmila Ivanovna",
     phoneNumber: "+1 (012) 345-6789",
   },
 ];
@@ -422,15 +422,19 @@ function initializePage() {
   if (activeButton) {
     if (activeButton.id === "Books") {
       createBookTable();
+      dataList.style.background = "#F2F2F0";
     }
     if (activeButton.id === "Visitors") {
       createVisitorsTable();
+      dataList.style.background = "#F2F2F0";
     }
     if (activeButton.id === "Cards") {
       createCardsTable();
+      dataList.style.background = "#F2F2F0";
     }
     if (activeButton.id === "Statistics") {
       createStatisticsPage();
+      dataList.style.background = "#7297A6";
     }
   }
 }
@@ -564,12 +568,12 @@ function dataId() {
 
   const btnChange = document.createElement("button");
   btnChange.classList.add("btnChange");
-  btnChange.textContent = "Добавить изменение";
+  btnChange.textContent = "Make a change";
   changeButtons.appendChild(btnChange);
 
   const btnDelete = document.createElement("button");
   btnDelete.classList.add("btnDelete");
-  btnDelete.textContent = "Удалить книгу";
+  btnDelete.textContent = "Remove a book";
   changeButtons.appendChild(btnDelete);
 
   const buttonsDelete = document.querySelectorAll(".change");
@@ -709,42 +713,42 @@ searchInput.addEventListener("input", (e) => {
   closeModal();
 
   const textAddBook = document.createElement("h5");
-  textAddBook.textContent = "Добавить новую книгу:";
+  textAddBook.textContent = "Add a new book:";
   addBookContent.appendChild(textAddBook);
 
   const modalTitle = document.createElement("input");
   modalTitle.type = "text";
-  modalTitle.placeholder = "Название книги";
+  modalTitle.placeholder = "Book title";
   addBookContent.appendChild(modalTitle);
 
   const modalAuthor = document.createElement("input");
   modalAuthor.type = "text";
-  modalAuthor.placeholder = "Автор";
+  modalAuthor.placeholder = "Author";
   addBookContent.appendChild(modalAuthor);
 
   const modalYear = document.createElement("input");
   modalYear.type = "text";
-  modalYear.placeholder = "Год публикации";
+  modalYear.placeholder = "Year of publication";
   addBookContent.appendChild(modalYear);
 
   const modalPublisher = document.createElement("input");
   modalPublisher.type = "text";
-  modalPublisher.placeholder = "Издательство";
+  modalPublisher.placeholder = "Publisher";
   addBookContent.appendChild(modalPublisher);
 
   const modalPages = document.createElement("input");
   modalPages.type = "text";
-  modalPages.placeholder = "Колличество страниц";
+  modalPages.placeholder = "Number of pages";
   addBookContent.appendChild(modalPages);
 
   const modalCopies = document.createElement("input");
   modalCopies.type = "text";
-  modalCopies.placeholder = "Коллчество экземпляров";
+  modalCopies.placeholder = "Number of copies";
   addBookContent.appendChild(modalCopies);
 
   const btnAddBook = document.createElement("button");
   btnAddBook.classList.add("btnAddBook");
-  btnAddBook.textContent = "Добаивить книгу";
+  btnAddBook.textContent = "Add a book";
   addBookContent.appendChild(btnAddBook);
 
   // Добовление новой книги
@@ -764,7 +768,7 @@ searchInput.addEventListener("input", (e) => {
         newPages === "" ||
         newCopies === ""
       ) {
-        textAddBook.textContent = "Пожалуйста, заполните все поля.";
+        textAddBook.textContent = "Please fill in all the fields.";
         textAddBook.classList.add("error-message");
         textAddBook.style.fontSize = "24px";
         textAddBook.style.color = "#592547";
@@ -777,7 +781,7 @@ searchInput.addEventListener("input", (e) => {
         newYearValue < 0 ||
         newYearValue > 2023
       ) {
-        textAddBook.textContent = "Пожалуйста, введите правельно год.";
+        textAddBook.textContent = "Please enter the year correctly.";
         textAddBook.classList.add("error-message");
         textAddBook.style.fontSize = "24px";
         textAddBook.style.color = "#592547";
@@ -785,7 +789,7 @@ searchInput.addEventListener("input", (e) => {
       }
       if (!/^\d+$/.test(newPages) || newPages < 0) {
         textAddBook.textContent =
-          "Пожалуйста, введите правельно количество страниц.";
+          "Please enter the number of pages correctly.";
         textAddBook.classList.add("error-message");
         textAddBook.style.fontSize = "16px";
         textAddBook.style.color = "#592547";
@@ -793,7 +797,7 @@ searchInput.addEventListener("input", (e) => {
       }
       if (!/^\d+$/.test(newCopies) || newCopies < 0) {
         textAddBook.textContent =
-          "Пожалуйста, введите правельно количество копий.";
+          "Please enter the number of copies correctly.";
         textAddBook.classList.add("error-message");
         textAddBook.style.fontSize = "16px";
         textAddBook.style.color = "#592547";
@@ -820,37 +824,37 @@ searchInput.addEventListener("input", (e) => {
   changeModal();
 
   const textChangeBook = document.createElement("h5");
-  textChangeBook.textContent = "Введите изменения:";
+  textChangeBook.textContent = "Enter changes:";
   changeContent.appendChild(textChangeBook);
 
   const changeTitle = document.createElement("input");
   changeTitle.type = "text";
-  changeTitle.placeholder = "Название книги";
+  changeTitle.placeholder = "Book title";
   changeContent.appendChild(changeTitle);
 
   const changeAuthor = document.createElement("input");
   changeAuthor.type = "text";
-  changeAuthor.placeholder = "Автор";
+  changeAuthor.placeholder = "Author";
   changeContent.appendChild(changeAuthor);
 
   const changeYear = document.createElement("input");
   changeYear.type = "text";
-  changeYear.placeholder = "Год публикации";
+  changeYear.placeholder = "Year of publication";
   changeContent.appendChild(changeYear);
 
   const changePublisher = document.createElement("input");
   changePublisher.type = "text";
-  changePublisher.placeholder = "Издательство";
+  changePublisher.placeholder = "Publisher";
   changeContent.appendChild(changePublisher);
 
   const changePages = document.createElement("input");
   changePages.type = "text";
-  changePages.placeholder = "Колличество страниц";
+  changePages.placeholder = "Number of pages";
   changeContent.appendChild(changePages);
 
   const changeCopies = document.createElement("input");
   changeCopies.type = "text";
-  changeCopies.placeholder = "Коллчество экземпляров";
+  changeCopies.placeholder = "Number of copies";
   changeContent.appendChild(changeCopies);
 
   dataId();
@@ -881,7 +885,7 @@ searchInput.addEventListener("input", (e) => {
         newPages === "" ||
         newCopies === ""
       ) {
-        textChangeBook.textContent = "Пожалуйста, заполните все поля.";
+        textChangeBook.textContent = "Please fill in all the fields.";
         textChangeBook.classList.add("error-message");
         textChangeBook.style.fontSize = "24px";
         textChangeBook.style.color = "#592547";
@@ -893,7 +897,7 @@ searchInput.addEventListener("input", (e) => {
         newYear < 0 ||
         newYear > 2023
       ) {
-        textChangeBook.textContent = "Пожалуйста, введите правельно год.";
+        textChangeBook.textContent = "Please enter the year correctly.";
         textChangeBook.classList.add("error-message");
         textChangeBook.style.fontSize = "24px";
         textChangeBook.style.color = "#592547";
@@ -901,7 +905,7 @@ searchInput.addEventListener("input", (e) => {
       }
       if (!/^\d+$/.test(newPages) || newPages < 0) {
         textChangeBook.textContent =
-          "Пожалуйста, введите правельно количество страниц.";
+          "Please enter the number of pages correctly.";
         textChangeBook.classList.add("error-message");
         textChangeBook.style.fontSize = "16px";
         textChangeBook.style.color = "#592547";
@@ -909,7 +913,7 @@ searchInput.addEventListener("input", (e) => {
       }
       if (!/^\d+$/.test(newCopies) || newCopies < 0) {
         textChangeBook.textContent =
-          "Пожалуйста, введите правельно количество копий.";
+          "Please enter the number of copies correctly.";
           textChangeBook.classList.add("error-message");
           textChangeBook.style.fontSize = "16px";
           textChangeBook.style.color = "#592547";
@@ -1109,22 +1113,22 @@ function createVisitorsTable() {
   }
   closeModal();
   const textAddVisitors = document.createElement("h5");
-  textAddVisitors.textContent = "Добавить нового посетителя:";
+  textAddVisitors.textContent = "Add a new visitor:";
   addBookContent.appendChild(textAddVisitors);
 
   const modalName = document.createElement("input");
   modalName.type = "text";
-  modalName.placeholder = "Введите имя и фамилию";
+  modalName.placeholder = "Enter first name and last name";
   addBookContent.appendChild(modalName);
 
   const modalPhone = document.createElement("input");
   modalPhone.type = "text";
-  modalPhone.placeholder = "Введите номер телефона";
+  modalPhone.placeholder = "Enter phone numbe";
   addBookContent.appendChild(modalPhone);
 
   const btnAddVisitors = document.createElement("button");
   btnAddVisitors.classList.add("btnAVisitors");
-  btnAddVisitors.textContent = "Добавить нового посетителя";
+  btnAddVisitors.textContent = "Add a new visitor";
   addBookContent.appendChild(btnAddVisitors);
 
   // Добовление нового посетителя
@@ -1134,21 +1138,21 @@ function createVisitorsTable() {
       const newName = modalName.value.trim();
       
       if (newPhone === "" || newName === "") {
-        textAddVisitors.textContent = "Пожалуйста, заполните все поля.";
+        textAddVisitors.textContent = "Please fill in all the fields";
         textAddVisitors.classList.add("error-message");
         textAddVisitors.style.fontSize = "24px";
         textAddVisitors.style.color = "#592547";
         return;
       }
       if (!/^[-+()\d]+$/.test(newPhone)){
-        textAddVisitors.textContent = "Пожалуйста, введите корректный номер телефона";
+        textAddVisitors.textContent = "Please enter a valid phone numbe";
         textAddVisitors.classList.add("error-message");
         textAddVisitors.style.fontSize = "16px";
         textAddVisitors.style.color = "#592547";
         return;
       }
       if (!/^[a-zA-Zа-яА-Я\s]+$/.test(newName)) {
-        textAddVisitors.textContent = "Пожалуйста, введите корректное имя";
+        textAddVisitors.textContent = "Please enter a valid name";
         textAddVisitors.classList.add("error-message");
         textAddVisitors.style.fontSize = "16px";
         textAddVisitors.style.color = "#592547";
@@ -1171,17 +1175,17 @@ function createVisitorsTable() {
   changeModal();
 
   const textChangeVisitors = document.createElement("h5");
-  textChangeVisitors.textContent = "Введите изменения:";
+  textChangeVisitors.textContent = "Enter changes:";
   changeContent.appendChild(textChangeVisitors);
 
   const changeName = document.createElement("input");
   changeName.type = "text";
-  changeName.placeholder = "Введите имя и фамилию";
+  changeName.placeholder = "Enter first name and last name";
   changeContent.appendChild(changeName);
 
   const changePhone = document.createElement("input");
   changePhone.type = "text";
-  changePhone.placeholder = "Введите номер телефона";
+  changePhone.placeholder = "Enter phone number";
   changeContent.appendChild(changePhone);
 
   const changeButtons = document.createElement("div");
@@ -1190,12 +1194,12 @@ function createVisitorsTable() {
 
   const btnChange = document.createElement("button");
   btnChange.classList.add("btnChange");
-  btnChange.textContent = "Добавить изменения";
+  btnChange.textContent = "Add changes";
   changeButtons.appendChild(btnChange);
 
   const btnDelete = document.createElement("button");
   btnDelete.classList.add("btnDelete");
-  btnDelete.textContent = "Удалить посетителя";
+  btnDelete.textContent = "Delete visitor";
   changeButtons.appendChild(btnDelete);
 
   const buttonsDelete = document.querySelectorAll(".change");
@@ -1241,7 +1245,7 @@ function createVisitorsTable() {
       const newName = changeName.value;
       const newPhone = changePhone.value;
       if (newPhone === "" || newName === "") {
-        textChangeVisitors.textContent = "Пожалуйста, заполните все поля.";
+        textChangeVisitors.textContent = "Please fill in all the fields";
         textChangeVisitors.classList.add("error-message");
         textChangeVisitors.style.fontSize = "24px";
         textChangeVisitors.style.color = "#592547";
@@ -1249,14 +1253,14 @@ function createVisitorsTable() {
       }
       
       if (!/^[-+()\d]+$/.test(newPhone)){
-        textChangeVisitors.textContent = "Пожалуйста, введите корректный номер телефона";
+        textChangeVisitors.textContent = "Please enter a valid phone number";
         textChangeVisitors.classList.add("error-message");
         textChangeVisitors.style.fontSize = "16px";
         textChangeVisitors.style.color = "#592547";
         return;
       }
       if (!/^[a-zA-Zа-яА-Я\s]+$/.test(newName)) {
-        textChangeVisitors.textContent = "Пожалуйста, введите корректное имя";
+        textChangeVisitors.textContent = "Please enter a valid name";
         textChangeVisitors.classList.add("error-message");
         textChangeVisitors.style.fontSize = "16px";
         textChangeVisitors.style.color = "#592547";
@@ -1362,7 +1366,7 @@ function createCardsTable() {
       
     });   
 
-    
+
     let searchText = "";
   searchInput.addEventListener("input", (e) => {
     searchText = e.target.value;  
@@ -1402,7 +1406,7 @@ function createCardsTable() {
   closeModal();
 
   const textAddCard = document.createElement("h5");
-  textAddCard.textContent = "Добавить новую карту посетителя:";
+  textAddCard.textContent = "Add a new visitor card:";
   addBookContent.appendChild(textAddCard);
 
   const visitorsList = document.createElement("select");
@@ -1425,7 +1429,7 @@ function createCardsTable() {
 
   const btnAddCard = document.createElement("button");
   btnAddCard.classList.add("btnAddCard");
-  btnAddCard.textContent = "Добавить новую карту";
+  btnAddCard.textContent = "Add a new card";
   addBookContent.appendChild(btnAddCard);
 
   if (btnAddCard) {
@@ -1462,7 +1466,7 @@ function createCardsTable() {
           back.classList.remove("active1");
         } else {
           textAddCard.textContent =
-            "Нет доступных копий книги, пожалуйста, выберете другую книгу.";
+            "No available copies of the book, please choose another book.";
           textAddCard.classList.add("error-message");
           textAddCard.style.fontSize = "14px";
           textAddCard.style.color = "#592547";
@@ -1516,6 +1520,8 @@ function createCardsTable() {
   document.body.style.overflow = 'auto';
 }
 
+
+
 // функция построения и заполнения страницы Statistic
 function createStatisticsPage() {
   dataList.innerHTML = "";
@@ -1524,14 +1530,20 @@ function createStatisticsPage() {
   addition.innerHTML = "";
   cardsList = loadCardsFromLocalStorage();
 
-  if (cardsList.length > 0) {
+ 
+  const top = document.createElement("div");
+  top.classList.add("top");
+  dataList.appendChild(top);
+
+  if (cardsList.length > 0) {   
+
     // Топ 5 книг
     const best5Book = document.createElement("div");
     best5Book.classList.add("best5Book");
-    dataList.appendChild(best5Book);
+    top.appendChild(best5Book);
 
     const bestBook = document.createElement("h2");
-    bestBook.textContent = "Список популярных книг";
+    bestBook.textContent = "List of popular books";
     best5Book.appendChild(bestBook);
 
     const titleCount = {};
@@ -1555,10 +1567,10 @@ function createStatisticsPage() {
     // Топ 5 посетителей
     const best5Visitors = document.createElement("div");
     best5Visitors.classList.add("best5Visitors");
-    dataList.appendChild(best5Visitors);
+    top.appendChild(best5Visitors);
 
     const bestVisitors = document.createElement("h2");
-    bestVisitors.textContent = "Список популярных посетителей";
+    bestVisitors.textContent = "List of popular visitors";
     best5Visitors.appendChild(bestVisitors);
 
     const visitorsCount = {};
@@ -1578,5 +1590,10 @@ function createStatisticsPage() {
       listElementV.appendChild(listItem);
     });
     best5Visitors.appendChild(listElementV);
+  } else {
+    const message = document.createElement("p");
+    message.textContent = "No books have been borrowed from the library yet.";
+    top.appendChild(message);
   }
+  
 }
