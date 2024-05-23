@@ -294,14 +294,3 @@ h2 {
     color: #BF9780;
     text-shadow: 2px 2px 2px #011F26;
 }
-
-@media (max-width: 768px){
-   
-  html{
-    width: 100%;
-  }
-       
-  
-
-   
-}
