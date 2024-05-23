@@ -21,7 +21,7 @@ body {
     font-size: 40px;
     display: flex;
     align-items: center;
-    padding-left: 250px;
+    padding-left: 180px;
 }
 
 .navbar {
@@ -196,9 +196,9 @@ table td:nth-child(8) {
 .active1 {
     opacity: 1;
     visibility: visible;
-
-
 }
+
+
 
 input,
 button,
