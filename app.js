@@ -407,6 +407,22 @@ buttons.forEach((button) => {
   });
 });
 
+function checkScreenWidth() {
+  const dataList = document.querySelector('.data_list');        
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if (isMobile || window.innerWidth < 900) {
+      
+      dataList.style.width = '95%';
+  } else {
+      
+      dataList.style.width = '80%';
+  }
+}          
+checkScreenWidth();       
+
+window.addEventListener('resize', checkScreenWidth);
+
 // Загрузка первой страницы
 window.addEventListener("load", function () {
   bookList = loadFromLocalStorage();
